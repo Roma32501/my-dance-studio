@@ -145,7 +145,28 @@
         }
 
         .anim-title { animation: slideDown 0.8s ease-out forwards; }
-        .anim-subtitle { opacity: 0; animation: fadeIn 1.5s ease-in 0.5s forwards; }
+        .anim-subtitle { opacity: 0; animation: fadeIn 1.5s ease-in 0.5s forwards; 
+	}
+
+	/* Контейнер для видео, чтобы оно сохраняло пропорции 16:9 */
+
+	.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    border: 2px solid #ff0055; /* Розовая рамка в стиле хип-хоп */
+}
+
+
+	.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
     </style>
 </head>
@@ -171,6 +192,11 @@
         <div class="card">
             <h3>BREAKING</h3>
             <p>Нижний брейк, фризы и силовые элементы. Стань легендой круга.</p>
+	    <div class="video-container">
+    
+                <iframe src="https://youtu.be/KmsZoldmAMo?si=dOLhU8m3tgcj1gL1" frameborder="0" allowfullscreen></iframe>
+            
+</div>
         </div>
         <div class="card">
             <h3>HIP-HOP CHOREO</h3>
